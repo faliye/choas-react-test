@@ -70,7 +70,3 @@ declare module '*.sass' {
   export default classes;
 }
 
-declare module 'choas-react' {
-  const classes: { readonly [key: string]: string };
-  export default any;
-}
