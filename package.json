@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/choas-react": "D://coding/choas-react",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.68",
     "@types/react": "^18.2.45",
@@ -21,6 +22,7 @@
     "browserslist": "^4.18.1",
     "camelcase": "^6.2.1",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "choas-react": "file:../choas-react",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
     "customize-cra": "^1.0.0",
@@ -64,9 +66,7 @@
     "webpack": "^5.64.4",
     "webpack-dev-server": "^4.6.0",
     "webpack-manifest-plugin": "^4.0.2",
-    "workbox-webpack-plugin": "^6.4.1",
-    "choas-react": "D://coding/choas-react",
-    "@types/choas-react": "D://coding/choas-react"
+    "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
     "start": "node scripts/start.js",

@@ -1,5 +1,6 @@
 'use strict';
 
+
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
@@ -147,6 +148,7 @@ module.exports = function (webpackEnv) {
                   // so that it honors browserslist config in package.json
                   // which in turn let's users customize the target behavior as per their needs.
                   'postcss-normalize',
+                 
                 ]
               : [
                   'tailwindcss',
@@ -160,8 +162,10 @@ module.exports = function (webpackEnv) {
                       stage: 3,
                     },
                   ],
+                 
                 ],
           },
+         
           sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
         },
       },
@@ -318,6 +322,8 @@ module.exports = function (webpackEnv) {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
+        "react": path.resolve(__dirname,'../node_modules/choas-react/node_modules/react'),
+        "react-dom": path.resolve(__dirname,'../node_modules/choas-react/node_modules/react-dom'),
         ...(modules.webpackAliases || {}),
       },
       plugins: [
@@ -334,6 +340,7 @@ module.exports = function (webpackEnv) {
           babelRuntimeEntryHelpers,
           babelRuntimeRegenerator,
         ]),
+        
       ],
     },
     module: {
