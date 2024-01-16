@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'choas-react/src/Button';
+import { Button } from 'choas-react';
 
 
 function App() {
