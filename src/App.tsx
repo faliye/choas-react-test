@@ -35,6 +35,16 @@ function App() {
         <br />
         <Button type='link' className='abc' block>123</Button>
       </div>
+
+      <div>
+        <Button type='primary' className='abc' block waterWave>123</Button>
+        <br />
+        <Button type='danger' className='abc' block waterWave>123</Button>
+        <br />
+        <Button type='ghost' className='abc' block waterWave>123</Button>
+        <br />
+        <Button type='link' className='abc' block waterWave>123</Button>
+      </div>
     </div>
   );
 }
