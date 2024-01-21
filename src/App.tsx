@@ -1,50 +1,42 @@
 import React from 'react';
-import { Button } from 'choas-react';
+import { Table } from 'choas-react';
+
+const columns = [
+  { key: 'ア', title: 'ア', rowSpan: 3 },
+  { key: 'イ', title: 'イ', rowSpan: 3 },
+  { key: 'ウ', title: 'ウ', rowSpan: 3 },
+  {
+    key: 'エ', title: 'エ', colSpan: 2,
+    children: [
+      {
+        key: 'エア', title: 'エア', colSpan: 2,
+        children: [
+          { key: 'エアア', title: 'エアア' },
+          { key: 'エアオ', title: 'エアオ' }
+        ]
+      }
+    ]
+  },
+];
+
+const data = [
+  { key: 'ア', value: '1' },
+  { key: 'イ', value: '2' },
+  { key: 'ウ', value: '3' },
+  { key: 'エ', value: '4' },
+  { key: 'エア', value: '41' },
+  { key: 'エアア', value: '4111' },
+  { key: 'エアオ', value: '412' },
+];
 
 
 function App() {
   return (
     <div>
-      <div>
-        <Button size='large' type='primary' className='abc'>123</Button>
-        <Button size='large' type='danger' className='abc'>123</Button>
-        <Button size='large' type='ghost' className='abc'>123</Button>
-        <Button size='large' type='link' className='abc'>123</Button>
-      </div>
-      <br />
-      <div>
-        <Button type='primary' className='abc'>123</Button>
-        <Button type='danger' className='abc'>123</Button>
-        <Button type='ghost' className='abc'>123</Button>
-        <Button type='link' className='abc'>123</Button>
-      </div>
-      <br />
-      <div>
-        <Button size='small' type='primary' className='abc'>123</Button>
-        <Button size='small' type='danger' className='abc'>123</Button>
-        <Button size='small' type='ghost' className='abc'>123</Button>
-        <Button size='small' type='link' className='abc'>123</Button>
-      </div>
-      <br />
-      <div>
-        <Button type='primary' className='abc' block>123</Button>
-        <br />
-        <Button type='danger' className='abc' block>123</Button>
-        <br />
-        <Button type='ghost' className='abc' block>123</Button>
-        <br />
-        <Button type='link' className='abc' block>123</Button>
-      </div>
-
-      <div>
-        <Button type='primary' className='abc' block waterWave>123</Button>
-        <br />
-        <Button type='danger' className='abc' block waterWave>123</Button>
-        <br />
-        <Button type='ghost' className='abc' block waterWave>123</Button>
-        <br />
-        <Button type='link' className='abc' block waterWave>123</Button>
-      </div>
+      <Table
+        data={data}
+        columns={columns}
+      />
     </div>
   );
 }
