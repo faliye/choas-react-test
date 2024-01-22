@@ -19,15 +19,17 @@ const columns = [
   },
 ];
 
-const data = [
-  { key: 'ア', value: '1' },
-  { key: 'イ', value: '2' },
-  { key: 'ウ', value: '3' },
-  { key: 'エ', value: '4' },
-  { key: 'エア', value: '41' },
-  { key: 'エアア', value: '4111' },
-  { key: 'エアオ', value: '412' },
-];
+const data = new Array(100).fill(1).map((item,index)=>{
+  return [
+    { key: 'ア', value: index },
+    { key: 'イ', value: index },
+    { key: 'ウ', value: index },
+    { key: 'エ', value: index },
+    { key: 'エア', value: index },
+    { key: 'エアア', value: index },
+    { key: 'エアオ', value: index },
+  ]
+});
 
 
 function App() {
