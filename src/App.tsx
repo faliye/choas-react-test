@@ -36,6 +36,7 @@ function App() {
       <Table
         data={data}
         columns={columns}
+        width={500}
       />
     </div>
   );
