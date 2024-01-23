@@ -19,7 +19,7 @@ const columns = [
   },
 ];
 
-const data = new Array(100).fill(1).map((item,index)=>{
+const data = new Array(100).fill(1).map((item, index) => {
   return [
     { key: 'ア', value: index },
     { key: 'イ', value: index },
@@ -39,6 +39,28 @@ function App() {
         data={data}
         columns={columns}
         width={500}
+        renderTFooter={(data, columns) => {
+          return (
+            <>
+              <tr className='abc' onClick={console.log}>
+                <td>会計：</td>
+                <td colSpan={4}>
+                  {
+                    data.reduce((a, c) => {
+                      return a + c.reduce((f, g) => f + g.value, 0);
+                    }, 0)
+                  }
+                </td>
+              </tr>
+              <tr>
+              <td colSpan={1}>製表日：</td>
+                <td colSpan={4}>
+                  令和６年１月23日
+                </td>
+              </tr>
+            </>
+          )
+        }}
       />
     </div>
   );
